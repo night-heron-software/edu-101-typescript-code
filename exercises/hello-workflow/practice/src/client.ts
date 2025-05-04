@@ -16,9 +16,9 @@ async function run() {
   });
 
   const handle = await client.workflow.start(sayHelloWorkflow, {
-    taskQueue: 'hello-world',
+    taskQueue: 'greeting-tasks',
     // type inference works! args: [name: string]
-    args: ['Temporal'],
+    args: ['Angela'],
     // in practice, use a meaningful business ID, like customerId or transactionId
     workflowId: 'my-first-workflow',
   });
